@@ -4,18 +4,13 @@ body {
     font-family: 'Roboto Mono', cursive, 'Vazir', Courier, monospace;
     margin: 0;
     padding: 0;
-}
-
-.example::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .example {
     -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    scrollbar-width: none;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
 
 header {
     width: 100%;
@@ -60,15 +55,55 @@ header .name a {
 }
 
 
-@keyframes fade-in-color {
-    0%   {background-color: #13151b;}
-    25%  {background-color: #222630;}
-    50%  {background-color: #393d47;}
-    100% {background-color: #273147;}
-  }
+@keyframes fade-in-background {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes drop-in-items {
+    0% {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes button-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translateY(50px);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0) rotateZ(20deg);
+    }
+    88% {
+        transform: translateY(-10) rotateZ(10deg);
+    }
+    95% {
+        transform: translateY(0) rotateZ(-10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .about-me {
-    background-color: #273147;
+    opacity: 0.6;
+    background-image: url("images/bg-t.png");
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -77,14 +112,15 @@ header .name a {
     height: 40em;
     color: rgb(189, 186, 181);
     padding: 9em 0;
-    animation-name: fade-in-color;
-    animation-duration: 6s;
+    image-rendering: pixelated;
+    animation: fade-in-background 1.8s linear forwards;
 }
 
 .title {
     font-size: xx-large;
     margin-bottom: 0.8em;
     transition: font-size 0.5s;
+    animation: drop-in-items 2s;
 }
 
 .title:hover {
@@ -95,6 +131,7 @@ header .name a {
     width: 350px;
     margin-bottom: 2em;
     font-size: large;
+    animation: drop-in-items 2s;
 }
 
 .what-i-do {
@@ -103,6 +140,11 @@ header .name a {
 
 .about-me img {
     margin-left: 7em;
+}
+
+.hire {
+    opacity: 0;
+    animation: button-animation 2s linear forwards 0.5s;
 }
 
 .hire a {
