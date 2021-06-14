@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;800&family=Roboto+Mono:wght@200;300;500&display=swap');
+
+body {
+    font-family: 'Roboto Mono', cursive, 'Vazir', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.example::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+header {
+    width: 100%;
+    height: 4em;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(32, 32, 32);
+}
+
+header .about, .projects, .contact {
+    margin-left: auto;
+}
+
+header .name, .about, .projects, .contact {
+    margin: auto 25px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header .about a, .projects a, .contact a {
+    margin: auto 0;
+    padding: 10px 16px;
+    color: white;
+    border-radius: 5px;
+}
+
+header .about a:hover, .projects a:hover, .contact a:hover {
+    background-color: rgb(49, 43, 43);
+    color: rgb(99, 99, 202);
+}
+
+header .name {
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+}
+
+header .name a {
+    color: whitesmoke;
+}
+
+
+@keyframes fade-in-color {
+    0%   {background-color: #13151b;}
+    25%  {background-color: #222630;}
+    50%  {background-color: #393d47;}
+    100% {background-color: #273147;}
+  }
+
+.about-me {
+    background-color: #273147;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40em;
+    color: rgb(189, 186, 181);
+    padding: 9em 0;
+    animation-name: fade-in-color;
+    animation-duration: 6s;
+}
+
+.title {
+    font-size: xx-large;
+    margin-bottom: 0.8em;
+    transition: font-size 0.5s;
+}
+
+.title:hover {
+    font-size: 3rem;
+}
+
+.summary {
+    width: 350px;
+    margin-bottom: 2em;
+    font-size: large;
+}
+
+.what-i-do {
+    margin-right: 7em;
+}
+
+.about-me img {
+    margin-left: 7em;
+}
+
+.hire a {
+    background-color: wheat;
+    text-decoration: none;
+    color: rgb(27, 20, 20);
+    font-size: x-large;
+    font-weight: bold;
+    padding: 0.7em 5em;
+    border-radius: 40px;
+    transition: font-size 0.5s;
+}
+
+.hire a:hover {
+    text-decoration: underline;
+    background-color: rgb(241, 227, 200);
+    font-size: 1.8rem;
+}
+
+.projects-section {
+    background-color: rgb(185, 178, 164);
+    text-align: center;
+    padding-bottom: 6em;
+}
+
+.projects-section .tit {
+    padding-top: 2em;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px wheat;
+}
+
+.projects-section .prs {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1.7em;
+    text-align: center;
+    justify-content: center;
+}
+
+.projects-section .prs .item {
+    width: 24%;
+    cursor: pointer;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+.projects-section .prs .item:hover {
+    background-color: rgb(156, 151, 140);
+}
+
+
+
+.projects-section .prs img {
+    width: 23em;
+    height: 23em;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px rgb(85, 85, 84);
+}
+
+.projects-section .prs .title {
+    padding-top: 0.5em;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: left;
+    margin-left: 1.5em;
+
+    /* float: left; */
+}
+
+.projects-section .prs span {
+    font-weight: normal;
+    font-size: 1.3rem;
+    display: block;
+}
+
+.contact-me {
+    background-color: #323537;
+    width: 100%;
+    height: 40em;
+    text-align: center;
+    justify-content: center;
+}
+
+.form {
+    width: 50%;
+    height: 20em;
+    text-indent: 10px;
+    padding: 20px;
+    margin: 5em auto;
+    text-indent: 6px;
+}
+
+.contact-me .title {
+    text-align: center;
+    padding-top: 1.7em;
+}
+
+
+input[type=text], textarea {
+    width: 95%;
+    height: 45px;
+    border: solid thin rgb(124, 124, 124);
+    background-color: rgb(177, 177, 177);
+    margin: 5px;
+    border-radius: 7px;
+    text-indent: 4px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=text]:focus, textarea:focus {
+    outline: none;
+    border: solid thin #ccc;
+}
+
+input[type=submit] {
+    background-color: wheat;
+    color: rgb(27, 20, 20);
+    font-size: 1.5rem;
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 0.7em 5em;
+    border-radius: 40px;
+    transition: font-size 0.5s;
+}
+
+
+input[type=submit]:hover {
+    background-color: rgb(241, 227, 200);
+    cursor: pointer;
+}
+
+label {
+    font-weight: normal;
+    font-size: large;
+    color: rgb(212, 208, 192);
+}
+
+
+footer {
+    width: 100%;
+    height: 1em;
+    background-color: #273147;
+    text-align: center;
+    padding: 10px 0;
+    font-size: small;
+}
+
+footer a {
+    text-decoration: none;
+    color: wheat;
+}
+
+footer a:hover {
+    color: rgb(109, 109, 177);
+    text-decoration: underline;
+}
