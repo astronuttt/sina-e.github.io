@@ -25,11 +25,14 @@ header div:hover {
 header div {
     background-color: #1d1f20;
     margin: .4em 0;
+    width: 99%;
 }
 
 header a {
     display: block;
-    padding: .5em 6em;
+    padding: .5em .5em;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     color: white;
 }
@@ -234,10 +237,12 @@ header a {
 
 .contact {
     text-align: center;
+    margin: auto;
 }
 
 .contact p {
     font-size: large;
+    margin: .1em .5em;
 }
 
 .contact a {
@@ -254,4 +259,57 @@ header a {
 footer {
     text-align: center;
     margin-top: 5em;
+}
+
+@media (min-width: 1000px) {
+    header div {
+        display: inline-block;
+        width: 24%;
+    }
+    
+    .about p {
+        padding: 1em 12em 12em 12em;
+
+    }
+
+    .skills {
+        display: flex;
+
+    }
+
+    .skills .backend, .devops, .other {
+        width: 30%;
+        height: 100%;
+        border-bottom: none;
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+
+    .skills .backend, .devops {
+        border-right: .1em solid rgba(177, 185, 199, 0.555);
+    }
+
+    .skills .devops .ul-center, .other .ul-center {
+        padding-top: 1em;
+        padding-bottom: 2em;
+    }
+    .skills .devops .ab {
+        padding-top: 1.4em;
+        padding-bottom: 1em;
+    }
+    .skills .devops h3, .other h3 {
+        padding-top: 1.5em;
+        padding-bottom: 1em;
+    } 
+    
+    .contact {
+        width: 55em;
+    }
+}
+
+@media (min-width: 1500px) {
+    .about p {
+        padding: 1em 17em 12em 17em;
+
+    }
 }
