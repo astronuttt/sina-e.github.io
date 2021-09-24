@@ -23,8 +23,8 @@
             </a>
         </div>
         <div>
-            <a href="#projects">
-                Projects
+            <a href="#resume">
+                Resume
             </a>
         </div>
         <div>
@@ -49,38 +49,133 @@
                     class="tooltiptext">Github</span></a>
             <a href="https://www.linkedin.com/in/ebrahimisina/" class="tooltip"><img src="imgs/linkedin.png"
                     alt="linkedin" /><span class="tooltiptext">LinkedIn</span></a>
-            <a href="https://t.me/thunderstrack" class="tooltip"><img src="imgs/telegram.png" alt="telegram" /><span
-                    class="tooltiptext">Telegram</span></a>
+            <a href="https://stackoverflow.com/users/11195542" class="tooltip"><img src="imgs/stackoverflow.png"
+                    alt="stackoverflow" /><span class="tooltiptext">Stackoverflow</span></a>
             <a href="https://twitter.com/thunderstrs" class="tooltip"><img src="imgs/twitter.png" alt="twitter" /><span
                     class="tooltiptext">Twitter</span></a>
+            <a href="https://t.me/thunderstrack" class="tooltip"><img src="imgs/telegram.png" alt="telegram" /><span
+                    class="tooltiptext">Telegram</span></a>
             <a href="https://virgool.io/@ebrahimisina78" class="tooltip"><img src="imgs/virgool.png"
                     alt="virgool" /><span class="tooltiptext">Virgool</span></a>
         </div>
     </section>
 
     <section class="about" id="about">
+        <h2>A little about me</h2>
+        <p>
+            I'm a self-taught programmer. I've been messing around with computers since I was a kid. I started working
+            as a freelancer when I graduated from high school and enrolled in university in late 2019, I have been
+            working on several small and big projects since then, specially RestAPI's, Back-end web development, and
+            Bots based on Telegram.
+        </p>
 
     </section>
 
     <section class="skills" id="skills">
-
+        <div class="backend">
+            <img class="icon" src="imgs/backend.png" alt="backend" />
+            <h2 class="title">Back-end development</h2>
+            <h4 class="ab">I love designing and developing web API's</h4>
+            <h3>Languages:</h3>
+            <div class="ul-center">
+                <ul>
+                    <li>Python</li>
+                    <li>Javascript</li>
+                    <li>(Html/css)</li>
+                    <li>some C/C++</li>
+            </div>
+            <h3>Tools i like to use:</h3>
+            <div class="ul-center">
+                <ul>
+                    <li>FastAPI</li>
+                    <li>Flask</li>
+                    <li>SqlAlchemy</li>
+                    <li>Tortoise-ORM</li>
+                    <li>Traefik</li>
+                    <li>Celery</li>
+                    <li>Node.js</li>
+                </ul>
+            </div>
+        </div>
+        <div class="devops">
+            <img class="icon" src="imgs/devops.png" alt="devops" />
+            <h2 class="title">Devops</h2>
+            <h4 class="ab">I also like Devops</h4>
+            <h3>Tools that i use and like:</h3>
+            <div class="ul-center">
+                <ul>
+                    <li>Git</li>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                    <li>Nginx</li>
+                    <li>Traefik</li>
+                    <li>AWS</li>
+                </ul>
+            </div>
+        </div>
+        <div class="other">
+            <img class="icon" src="imgs/gear.png" alt="gear" />
+            <h2 class="title">Other tools</h2>
+            <h4 class="ab">There are some other things that i'm good at, like databases, caching, and ...</h4>
+            <h3>Some tools that I use:</h3>
+            <div class="ul-center">
+                <ul>
+                    <li>Postgresql</li>
+                    <li>MySql</li>
+                    <li>Redis</li>
+                    <li>MongoDB</li>
+                    <li>Traefik</li>
+                    <li>Celery</li>
+                    <li>Aiogram</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <section class="projects" id="projects">
-
+    <section class="resume" id="resume">
+        <div class="my-resume">
+            <h1>My Resume</h1>
+            <div class="rsmcont">
+                <a href="resume.pdf">English</a>
+                <a href="resume-fa.pdf">Persian</a>
+            </div>
+        </div>
     </section>
 
     <section class="contact" id="contact">
-
+        <h1>Contact Me:</h1>
+        <p>Interested in working together? let's talk about it</p>
+        <a href="mailto:ebrahimisina78@gmail.com">ebrahimisina78@gmail.com</a>
+        <a href="https://t.me/thunderstrack">@Thunderstrack on Telegram</a>
+        <a href="tel:+989014626323">+989014626323 via Text Message</a>
     </section>
 
-    <footer>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="imgs/top.png" alt="top" /></button>
+    <script>
+        //Get the button:
+        mybutton = document.getElementById("myBtn");
 
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    <footer>
+        Sina Ebrahimi - 2021
     </footer>
 
 </body>
-<!--
-    inspired by https://www.figma.com/community/file/897605510384968096
--->
 
 </html>
