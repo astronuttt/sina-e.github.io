@@ -137,7 +137,7 @@ header a {
 
 .skills {
     background-color: rgb(207, 216, 231);
-    margin: -10em 4em 1em 4em;
+    margin: -10em 2.5em 1em 2.5em;
     box-shadow: 0 0 6px 8px rgba(56, 63, 83, 0.445);
     border-radius: .5em;
     text-align: center;
@@ -155,6 +155,7 @@ header a {
 
 .skills .ab {
     color: rgb(62, 96, 160);
+    margin: .1em .5em;
 }
 .skills ul {
     margin-top: .1em;
