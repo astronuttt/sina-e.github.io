@@ -31,8 +31,6 @@ header div {
 header a {
     display: block;
     padding: .5em .4em;
-    /* width: 100%;
-    height: 100%; */
     text-decoration: none;
     color: white;
 }
@@ -178,12 +176,12 @@ header a {
     padding-bottom: .1em;
 }
 
-.skills .backend, .devops {
+.skills .backend, .frontend {
     padding: 3em 0;
     border-bottom: .1em solid rgba(177, 185, 199, 0.555);
 }
 
-.skills .other {
+.skills .general {
     padding: 3em 0;
 }
 
@@ -277,7 +275,7 @@ footer {
 
     }
 
-    .skills .backend, .devops, .other {
+    .skills .backend, .frontend, .general {
         width: 30%;
         height: 100%;
         border-bottom: none;
@@ -285,21 +283,21 @@ footer {
         flex-basis: 0;
     }
 
-    .skills .backend, .devops {
+    .skills .backend, .frontend {
         border-right: .1em solid rgba(177, 185, 199, 0.555);
     }
 
-    .skills .devops .ul-center, .other .ul-center {
-        padding-top: 1em;
-        padding-bottom: 2em;
+    .skills .frontend .ul-center, .general .ul-center {
+        padding-top: .4em;
+        padding-bottom: 1.9em;
     }
-    .skills .devops .ab {
-        padding-top: 1.4em;
-        padding-bottom: 1em;
+    .skills .frontend .ab {
+        padding-top: .6em;
+        padding-bottom: .6em;
     }
-    .skills .devops h3, .other h3 {
-        padding-top: 1.5em;
-        padding-bottom: 1em;
+    .skills .frontend h3, .general h3 {
+        padding-top: .4em;
+        padding-bottom: 0.5em;
     } 
     
     .contact {
