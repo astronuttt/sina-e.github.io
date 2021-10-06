@@ -156,9 +156,21 @@
         <div class="wrapper">
             <h1>Contact Me:</h1>
             <p>Interested in working together? let's talk about it</p>
-            <a href="mailto:ebrahimisina78@gmail.com">ebrahimisina78@gmail.com</a>
-            <a href="https://t.me/thunderstrack">@Thunderstrack on Telegram</a>
-            <a href="tel:+989014626323">+989014626323 via Text Message</a>
+            <div class="cnt-container">
+                <a href="mailto:ebrahimisina78@gmail.com">ebrahimisina78@gmail.com</a>
+                <button onclick="copyToClipBoard('ebrahimisina78@gmail.com')" class="tooltip"><img src="imgs/copy.png"
+                        alt="copy" /><span class="tooltiptext">Copy to clipboard</span></button>
+            </div>
+            <div class="cnt-container">
+                <a href="https://t.me/thunderstrack">@Thunderstrack on Telegram</a>
+                <button onclick="copyToClipBoard('@Thunderstrack')" class="tooltip"><img src="imgs/copy.png"
+                        alt="copy" /><span class="tooltiptext">Copy to clipboard</span></button>
+            </div>
+            <div class="cnt-container">
+                <a href="tel:+989014626323">+989014626323 via Text Message</a>
+                <button onclick="copyToClipBoard('+989014626323')" class="tooltip"><img src="imgs/copy.png"
+                        alt="copy" /><span class="tooltiptext">Copy to clipboard</span></button>
+            </div>
         </div>
     </section>
 
@@ -191,7 +203,12 @@
             });
         });
 
+        function copyToClipBoard(text) {
+            /* Copy the text to clipboard */
+            console.log(text);
+            navigator.clipboard.writeText(text);
 
+        }
     </script>
     <footer>
         Sina Ebrahimi - 2021
