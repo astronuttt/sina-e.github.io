@@ -59,6 +59,11 @@
             <a href="https://virgool.io/@ebrahimisina78" target="_blank" class="tooltip"><img src="imgs/virgool.png"
                     alt="virgool" /><span class="tooltiptext">Virgool</span></a>
         </div>
+        <div class="scroll-down" id="scroll-down">
+            <a href="#about">
+                <img src="imgs/scroll-down.png" alt="scroll-down">
+            </a>
+        </div>
     </section>
 
     <section class="about" id="about">
@@ -178,6 +183,15 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
+
+        $(function () {
+            $('a[href*=#]').on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
+            });
+        });
+
+
     </script>
     <footer>
         Sina Ebrahimi - 2021
