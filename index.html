@@ -35,8 +35,10 @@
     </header>
 
     <section class="intro">
-        <h3 class="print"> >>> <span style="color: #9fca56;">print</span>(<span
-                style="color: #55b5db !important;">"Hello!"</span>)</h3>
+        <h3 class="print"> >>>
+            <span id="print" style="color: #9fca56;"></span><span id="openprnth"></span><span id="openqute"></span><span
+                id="hello"></span><span id="closequte"></span><span id="closeprnth"></span>
+        </h3>
         <div class="name-stack">I'm <span style="font-weight: bold;">Sina Ebrahimi</span>, a Python programmer and
             Back-end Developer</div>
         <div class="my-pic">
@@ -196,19 +198,53 @@
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         }
 
-        $(function () {
-            $('a[href*=#]').on('click', function (e) {
-                e.preventDefault();
-                $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
-            });
-        });
+        // $(function () {
+        //     $('a[href*=#]').on('click', function (e) {
+        //         e.preventDefault();
+        //         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
+        //     });
+        // });
 
         function copyToClipBoard(text) {
             /* Copy the text to clipboard */
             console.log(text);
             navigator.clipboard.writeText(text);
-
         }
+
+        async function printIntro() {
+            const obj = {
+                "print": "print",
+                "openprnth": "(",
+                "closeprnth": ")",
+                "openqute": '"',
+                "closequte": '"',
+                "hello": "Hello!",
+            }
+            await sleep(600);
+            let text, element;
+            for (const key in obj) {
+                text = obj[key];
+                element = document.getElementById(key);
+                for (var i = 0, l = text.length; i < l; i++) {
+                    element.innerText = text.substring(0, i + 1);
+                    await sleep(180, key);
+                }
+                await sleep(170);
+            }
+
+            function sleep(ms, key = null) {
+                switch (key) {
+                    case "openprnth":
+                    case "closeprnth":
+                    case "openqute":
+                    case "closequte":
+                        ms = 0;
+                        break;
+                }
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+        }
+        window.addEventListener("load", printIntro)
     </script>
     <footer>
         Sina Ebrahimi - 2021

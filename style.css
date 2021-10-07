@@ -50,6 +50,10 @@ header a {
     font-size: x-large;
 }
 
+#hello, #openqute, #closequte {
+    color: #55b5db !important;
+}
+
 .intro .name-stack {
     font-size: large;
 }
